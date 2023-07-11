@@ -1,5 +1,6 @@
 import "./App.css";
-import SpecialAssignment from "./Assignment/specialAssignment";
+import SpecialAssignment from "./Assignment/assignment2";
+import ResumeComponent from "./Assignment/assignment1";
 function Anju({ branch, location }) {
   return (
     <>
@@ -35,13 +36,18 @@ function SecondChildComponent() {
     </div>
   );
 }
+
 function App() {
   return (
     <>
       <h1>Learing Props</h1>
       <Deepika branch="cse" location="lucknow" />
       <Anju branch="cse" location="gorakhpure" />
-      <h1>Special assignment!</h1>
+      <hr />
+      <h1 className="assignment">Assignment-1.....(Resume)</h1>
+      <ResumeComponent />
+      <hr />
+      <h1 className="assignment">Assignment-2.....(special assignment)</h1>
       <SpecialAssignment>
         {/* // props.children accept by SpecialAssignment.jsx  
         1. Here we can Write Component,expresstion,some text
