@@ -43,9 +43,16 @@ function App() {
       <Anju branch="cse" location="gorakhpure" />
       <h1>Special assignment!</h1>
       <SpecialAssignment>
-        {/* // props.children accept by SpecialAssignment.jsx*/}
+        {/* // props.children accept by SpecialAssignment.jsx  
+        1. Here we can Write Component,expresstion,some text
+        */}
+        <h2>This is normal text!</h2>
+        <h3>this is expression: {100 + 200}</h3>
         <FirstChildComponent />
         <SecondChildComponent />
+      </SpecialAssignment>
+      <SpecialAssignment>
+        <h2>This is second special-assignment!!!!</h2>
       </SpecialAssignment>
     </>
   );

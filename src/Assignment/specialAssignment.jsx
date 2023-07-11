@@ -8,6 +8,7 @@ const SpecialAssignment = (props) => {
           border: "4px solid red",
           borderRadius: "20px",
           backgroundColor: "#333",
+          margin: "20px",
         }}
       >
         <h3>This is from specialAssignment</h3>
