@@ -2,20 +2,24 @@ import React from "react";
 // import "./App.css";
 function Skill({ skills }) {
   return (
-    <div>
-      <h1>
-        Skill
+    <>
+      <h1>Skill</h1>
+      <div>
         <h6>
           {skills.map((skill, index) => {
             return (
               <>
-                <div key={index}>{skill}</div>
+                <div key={index}>
+                  <ul>
+                    <li>{skill}</li>
+                  </ul>
+                </div>
               </>
             );
           })}
         </h6>
-      </h1>
-    </div>
+      </div>
+    </>
   );
 }
 function Education({ educations }) {
@@ -28,12 +32,11 @@ function Education({ educations }) {
             return (
               <>
                 <div key={education.id}>
-                  school:
-                  {education.schoolName}
-                  <br />
-                  college:{education.collegeName}
-                  <br />
-                  branch-name: {education.branchName}
+                  <ul>
+                    <li> schoolName:{education.schoolName}</li>
+                    <li> collegeName:{education.collegeName}</li>
+                    <li> branchName: {education.branchName}</li>
+                  </ul>
                 </div>
               </>
             );
@@ -53,11 +56,11 @@ function Experience({ experiences }) {
             return (
               <>
                 <div key={experience.id}>
-                  company: {experience.companyName}
-                  <br />
-                  position: {experience.positionName}
-                  <br />
-                  date: {experience.year}
+                  <ul>
+                    <li> company: {experience.companyName}</li>
+                    <li>position: {experience.positionName}</li>
+                    <li> date: {experience.year}</li>
+                  </ul>
                 </div>
               </>
             );
@@ -92,6 +95,18 @@ function ResumeComponent() {
         year: 2016,
         companyName: "google",
         positionName: "reactDevelopment",
+      },
+      {
+        id: 2,
+        year: 2017,
+        companyName: "microsoft",
+        positionName: "FullStackDevelopment",
+      },
+      {
+        id: 3,
+        year: 2018,
+        companyName: "Remote",
+        positionName: "FullStackDevelopment",
       },
     ],
   };
