@@ -1,5 +1,6 @@
 import React from "react";
-// import "./App.css";
+// import "./Assignment/App.css";
+import "./style.css";
 function Skill({ skills }) {
   if (skills.length === 0) {
     return <></>;
@@ -8,15 +9,17 @@ function Skill({ skills }) {
     <>
       <h1>Skill</h1>
       <div>
-        <h6>
+        <h6 style={{ display: "flex" }}>
           {skills.map((skill, index) => {
             return (
               <>
-                <h2 key={index}>
-                  <ul>
-                    <li>{skill}</li>
-                  </ul>
-                </h2>
+                <div className="skilles">
+                  <ol>
+                    <h2 key={index}>
+                      <li>{skill}</li>
+                    </h2>
+                  </ol>
+                </div>
               </>
             );
           })}
@@ -35,11 +38,11 @@ function Education({ educations }) {
             return (
               <>
                 <div key={education.id}>
-                  <ul>
+                  <ol>
                     <li> schoolName:{education.schoolName}</li>
                     <li> collegeName:{education.collegeName}</li>
                     <li> branchName: {education.branchName}</li>
-                  </ul>
+                  </ol>
                 </div>
               </>
             );
@@ -59,11 +62,11 @@ function Experience({ experiences }) {
             return (
               <>
                 <div key={experience.id}>
-                  <ul>
+                  <ol>
                     <li> company: {experience.companyName}</li>
                     <li>position: {experience.positionName}</li>
                     <li> date: {experience.year}</li>
-                  </ul>
+                  </ol>
                 </div>
               </>
             );
@@ -113,6 +116,19 @@ function ResumeComponent() {
       },
     ],
   };
+  function handlePrintResume() {
+    // alert("Welcome to resume!");
+    // let bttn = document.querySelector("#bntDiv");
+    // console.log(bttn);
+    // bttn.style.display = "none";
+
+    // assignment-4
+    window.print();
+
+    // assignment-7
+    // window.close(); //close the current window tab
+  }
+
   return (
     <div>
       <h1 className="anjuSingh">Anju-Singh</h1>
@@ -121,6 +137,9 @@ function ResumeComponent() {
 
       <Education educations={resume.education} />
       <Experience experiences={resume.experience} />
+      <div className="btn" id="btnDiv">
+        <button onClick={handlePrintResume}>Print-resume</button>
+      </div>
     </div>
   );
 }

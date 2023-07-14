@@ -1,12 +1,14 @@
 import "./App.css";
-import ResumeComponent from "./Assignment/assignment1";
-
+import Clock from "./Assignment/Clock";
+import Timer from "./Assignment/Timer";
 function App() {
   return (
     <>
-      <h1 className="assignment">(Resume)</h1>
-      <ResumeComponent />
+      <h1 style={{ textAlign: "center" }}>Digital-clock</h1>
       <hr />
+      <Clock />
+      <hr />
+      <Timer></Timer>
     </>
   );
 }

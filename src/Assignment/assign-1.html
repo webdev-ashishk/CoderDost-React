@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>assignment-1</title>
+    <style>
+      #heading3 {
+        /* text-align: center; */
+        border: 2px solid black;
+        font-size: 2rem;
+        width: min-content;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Task</h3>
+    <p>
+      Make a simple page with 1 Image, 1button, 1 form Input text box and try to
+      apply these events .
+    </p>
+    <div class="container">
+      <button onclick="singleClick()" id="btn">
+        dboule-click-perform-alert sigle click perform log
+      </button>
+      <br />
+
+      <h3
+        onmouseover="myOverFunction()"
+        id="heading3"
+        onmouseout="myOutFunction()"
+      >
+        testing onmouseover effect!
+      </h3>
+      <br />
+      <form>
+        <input
+          type="text"
+          placeholder="Assignment-1"
+          onfocus="onmyFocus()"
+          onblur=" onmyBlur()"
+        />
+
+        <hr />
+        <!-- -----------------Assignment-2------------------------ -->
+        <!-- <input type="text" placeholder="assignment-2" />
+        <button type="submit">assignment-2</button> -->
+        <button id="btn1">prevent-single-click</button>
+      </form>
+    </div>
+    <script>
+      // const image = document.getElementById("img");
+      // image.addEventListener("mouseover", () => {
+      //   cursor: "pointer", scale(1.3);
+      // });
+      function myOverFunction() {
+        const heading3 = document.getElementById("heading3");
+        heading3.style.fontSize = "2rem";
+        heading3.style.cursor = "pointer";
+        heading3.style.color = "red";
+      }
+      function myOutFunction() {
+        const heading3 = document.getElementById("heading3");
+        heading3.style.fontSize = "1rem";
+        heading3.style.color = "black";
+      }
+      function singleClick() {
+        console.log("single click");
+      }
+      const btn = document.getElementById("btn");
+      btn.addEventListener("dblclick", () => {
+        alert("double button is clicked");
+      });
+      function onmyFocus() {
+        console.log("my focus is called!");
+      }
+      function onmyBlur() {
+        console.log("blur called@");
+      }
+      const btn1 = document.getElementById("btn1");
+      btn1.addEventListener("click", () => {
+        // e.preventDefault();
+        console.log("prevent single click");
+      });
+    </script>
+  </body>
+</html>

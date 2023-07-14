@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=`, initial-scale=1.0" />
+    <title>Bubbling!</title>
+    <style>
+      #Parent,
+      #Child,
+      #GrandParent {
+        border: 2px solid black;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Learning event Bubbling!</h1>
+    <div id="GrandParent">
+      grandParent
+      <div id="Parent">
+        parent
+
+        <div id="Child">child</div>
+      </div>
+    </div>
+    <script>
+      const Parent = document.getElementById("Parent");
+      const Child = document.getElementById("Child");
+      const GrandChild = document.getElementById("GrandChild");
+      //This will generate a problem called bubbling!
+      /*
+      Parent.addEventListener("click", () => {
+        console.log("parent clicked!");
+      });
+      Child.addEventListener("click", () => {
+        console.log("Child clicked!");
+      });
+      GrandParent.addEventListener("click", () => {
+        console.log("GrandChild clicked!");
+      });
+      */
+      //this is solution of event bubbling!
+      Parent.addEventListener("click", (e) => {
+        e.stopPropagation();
+        console.log("parent clicked!");
+      });
+      Child.addEventListener("click", (e) => {
+        e.stopPropagation();
+        console.log("Child clicked!");
+      });
+      GrandParent.addEventListener("click", (e) => {
+        e.stopPropagation();
+        console.log("GrandChild clicked!");
+      });
+      //Curious
+
+      // 1. Question If we change the type of event then it will propagate or not ?
+    </script>
+  </body>
+</html>

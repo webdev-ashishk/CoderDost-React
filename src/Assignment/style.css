@@ -1,0 +1,10 @@
+.printResume {
+  font-size: 2rem;
+  /* display: none; */
+}
+.btn {
+  text-align: center;
+}
+.printResume:hover {
+  cursor: pointer;
+}

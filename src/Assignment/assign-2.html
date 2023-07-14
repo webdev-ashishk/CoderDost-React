@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>assignment-2</title>
+  </head>
+  <body>
+    <h1>Assignment 2</h1>
+    <hr />
+    <h5>Link example</h1>
+    <a href="https://google.com" id="psc">click here goto google</a>
+    <hr />
+    <h5>Form example</h1>
+
+    <form action="">
+      <input type="text" name="name" id="name" />
+      <button id="psc2">Submit</button>
+    </form>
+    <script>
+      const btn = document.getElementById("psc");
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        console.log("bnt clicked");
+      });
+      const btn2 = document.getElementById("psc2");
+      btn2.addEventListener("click", (e) => {
+        e.preventDefault();
+        console.log("submit button clicked");
+      });
+    </script>
+  </body>
+</html>
