@@ -1,6 +1,9 @@
 import React from "react";
 // import "./App.css";
 function Skill({ skills }) {
+  if (skills.length === 0) {
+    return <></>;
+  }
   return (
     <>
       <h1>Skill</h1>
@@ -9,11 +12,11 @@ function Skill({ skills }) {
           {skills.map((skill, index) => {
             return (
               <>
-                <div key={index}>
+                <h2 key={index}>
                   <ul>
                     <li>{skill}</li>
                   </ul>
-                </div>
+                </h2>
               </>
             );
           })}
