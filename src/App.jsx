@@ -1,12 +1,17 @@
 import "./App.css";
-import ResumeComponent from "./Assignment/assignment1";
-
+import Counter from "./Assignment/counter";
+import Toggle from "./Assignment/Toggle";
+import ObjectInsideuseState from "./Assignment/ObjectInsideuseState";
 function App() {
   return (
     <>
-      <h1 className="assignment">Assignment-1.....(Resume)</h1>
-      <ResumeComponent />
+      <h1 style={{ textAlign: "center" }}>Learing useState Hook</h1>
       <hr />
+      <Counter />
+      <hr />
+      <Toggle />
+      <hr />
+      <ObjectInsideuseState />
     </>
   );
 }
