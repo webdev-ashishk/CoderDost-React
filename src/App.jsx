@@ -1,7 +1,13 @@
 import "./App.css";
 import TextArea from "./Assignment/TextArea";
 import Select from "./Assignment/Select";
+import Input from "./Assignment/Input";
+import EventObject from "./Assignment/EventObject";
+import Child from "./Assignment/Child";
 function App() {
+  function getData(data) {
+    console.log(data);
+  }
   return (
     <>
       <h1 style={{ textAlign: "center" }}>Chapter-6[Forms]</h1>
@@ -10,6 +16,13 @@ function App() {
       <TextArea />
       <hr />
       <Select />
+      <hr />
+      <h2>Input box</h2>
+      <Input />
+      <hr />
+      <EventObject />
+      <hr />
+      <Child getData={getData} />
     </>
   );
 }
