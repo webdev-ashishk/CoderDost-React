@@ -4,6 +4,7 @@ import Select from "./Assignment/Select";
 import Input from "./Assignment/Input";
 import EventObject from "./Assignment/EventObject";
 import Child from "./Assignment/Child";
+import Parent from "./Assignment/LiftingStateUp/Parent";
 function App() {
   function getData(data) {
     console.log(data);
@@ -23,6 +24,8 @@ function App() {
       <EventObject />
       <hr />
       <Child getData={getData} />
+      <hr />
+      <Parent />
     </>
   );
 }

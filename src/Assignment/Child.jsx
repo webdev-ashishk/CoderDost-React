@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Child = (props) => {
+const Child = ({ getData }) => {
   const [name, setName] = useState("");
   function handleName(e) {
     // e.preventdefault();
@@ -8,7 +8,7 @@ const Child = (props) => {
   }
   function handleSubmit(e) {
     e.preventDefault();
-    props.getData(name);
+    getData(name);
   }
   return (
     <>
