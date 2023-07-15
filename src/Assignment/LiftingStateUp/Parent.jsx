@@ -1,24 +1,24 @@
 import React from "react";
-
-const Child = (props) => {
-  const data = "this is child data!";
+//sending data from child!
+const Child = ({ recieveInChild }) => {
+  const sendData = "this is child data!";
 
   return (
     <>
       <h3>This is child Data!</h3>
-      <button onClick={() => props.getData(data)}>This is Child</button>
+      <button onClick={() => recieveInChild(sendData)}>This is Child</button>
     </>
   );
 };
-
+// receive data from parent !
 const Parent = () => {
-  function getName(name) {
-    console.log(name);
+  function recieveInParent(recieveData) {
+    console.log(recieveData);
   }
   return (
     <>
       <h3>Parent-rendered!</h3>
-      <Child getData={getName} />
+      <Child recieveInChild={recieveInParent} />
     </>
   );
 };
