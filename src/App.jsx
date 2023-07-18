@@ -1,33 +1,20 @@
 import "./App.css";
+import DropDown from "./DropDown";
 
 function App() {
-  console.log("app-rendered");
-  return (
-    <>
-      <Game />
-      <Wow />
-    </>
-  );
-}
-function Game() {
-  const prize = 1000;
-  return (
-    <>
-      <div className="hello">
-        <h1>play game and win {prize}</h1>
-      </div>
-    </>
-  );
-}
-function Wow() {
-  console.log("wow-rendered");
+
 
   return (
     <>
-      <div className="wow">
-        <h1>wow!!</h1>
-      </div>
+      <h1 style={{ textAlign: "center", color: "blue" }}>
+        Welcome to chapter-6[Assignment!]
+      </h1>
+      <hr />
+      <h3>static drop down</h3>
+      <DropDown />
+      
     </>
   );
 }
+
 export default App;
