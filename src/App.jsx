@@ -1,6 +1,7 @@
 import "./App.css";
 import DropDown from "./assignment/Assig-one/DropDown";
-import SearchBar from "./assignment/assig-two/SearchBar";
+import MainSearch from "./assignment/assig-two/MainSearch";
+
 function App() {
   return (
     <>
@@ -10,10 +11,7 @@ function App() {
       <hr />
       <h3>Dynamic drop down</h3>
       <DropDown /> */}
-      <br />
-      <hr />
-      <h3 style={{ textAlign: "center", color: "blue" }}>Search Bar</h3>
-      <SearchBar />
+      {/* <MainSearch /> */}
     </>
   );
 }
