@@ -1,33 +1,20 @@
-import "./App.css";
-
+import { useState } from "react";
+import MyContext from "./MyContext";
+import RandomComponent from "./RandomComponent";
+import RC2 from "./RC2";
 function App() {
-  console.log("app-rendered");
+  const [text, setText] = useState(" this is app.jsx file ");
   return (
     <>
-      <Game />
-      <Wow />
+      <h3>app-rendered!@ app.jsx</h3>
+      {/* //value is global data  */}
+      <MyContext.Provider value={{ text, setText }}>
+        <RandomComponent />
+        <hr />
+        <RC2></RC2>
+      </MyContext.Provider>
     </>
   );
 }
-function Game() {
-  const prize = 1000;
-  return (
-    <>
-      <div className="hello">
-        <h1>play game and win {prize}</h1>
-      </div>
-    </>
-  );
-}
-function Wow() {
-  console.log("wow-rendered");
 
-  return (
-    <>
-      <div className="wow">
-        <h1>wow!!</h1>
-      </div>
-    </>
-  );
-}
 export default App;
