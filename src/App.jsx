@@ -1,33 +1,18 @@
-import "./App.css";
+import React, { createContext, useState } from "react";
+import { DCounter } from "./DCounter ";
+import ICounter from "./ICounter";
+export const MyContext = createContext("");
+const App = () => {
+  const [count, setCount] = useState(0);
+  return (
+    <>
+      <h2>count value : {count}</h2>
+      <MyContext.Provider value={{ setCount }}>
+        <ICounter />
+        <DCounter />
+      </MyContext.Provider>
+    </>
+  );
+};
 
-function App() {
-  console.log("app-rendered");
-  return (
-    <>
-      <Game />
-      <Wow />
-    </>
-  );
-}
-function Game() {
-  const prize = 1000;
-  return (
-    <>
-      <div className="hello">
-        <h1>play game and win {prize}</h1>
-      </div>
-    </>
-  );
-}
-function Wow() {
-  console.log("wow-rendered");
-
-  return (
-    <>
-      <div className="wow">
-        <h1>wow!!</h1>
-      </div>
-    </>
-  );
-}
 export default App;
