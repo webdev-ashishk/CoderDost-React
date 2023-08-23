@@ -18,8 +18,16 @@ const Product = () => {
     return (
       <>
         <div className="col-md-3">
-          <Card style={{ width: "18rem", border: "2px solid red" }}>
-            <Card.Img variant="top" src={product.image} />
+          <Card
+            style={{ width: "18rem", border: "2px solid red", margin: "10px" }}
+          >
+            <div className="text-center">
+              <Card.Img
+                variant="top"
+                src={product.image}
+                style={{ widh: "100px", height: "150px" }}
+              />
+            </div>
             <Card.Body>
               <Card.Title>{product.title}</Card.Title>
               <Card.Text>Price: {product.price}</Card.Text>
@@ -34,8 +42,7 @@ const Product = () => {
 
   return (
     <>
-      <h2>Produc.jsx</h2>
-      {/* {JSON.stringify(Products)} */}
+   
       <div className="row">{carts}</div>
     </>
   );

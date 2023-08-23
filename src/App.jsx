@@ -4,7 +4,6 @@ import Product from "./Components/Product";
 function App() {
   return (
     <>
-      <h2>app.jsx</h2>
       <Product />
     </>
   );
