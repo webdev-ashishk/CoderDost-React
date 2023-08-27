@@ -24,7 +24,7 @@ const Counter = () => {
               Increment
             </button>
             <button
-              onClick={() => dispatch(incrementby10())}
+              onClick={() => dispatch(incrementby10(10))}
               className="mr-9 text-3xl bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
             >
               Increment by 10

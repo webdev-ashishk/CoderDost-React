@@ -9,3 +9,5 @@ const store = configureStore({
 });
 
 export default store;
+// Reducer is only way to update the store !
+// Reducer is pure function with "Takes old state and Return new State"
