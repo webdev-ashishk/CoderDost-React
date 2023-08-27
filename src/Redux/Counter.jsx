@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement, incrementby10 } from "./counterSlice";
 
 const Counter = () => {
-  const count = useSelector((state) => state.counter.value);
+  const globalData = useSelector((state) => state.counter.value);
   const dispatch = useDispatch();
 
   return (
@@ -14,7 +14,7 @@ const Counter = () => {
       <div className="flex justify-center">
         <div className="pt-40 border border-sky-600 bg-sky-200 w-2/4 rounded-lg">
           <p className="text-9xl mb-32 font-bold text-blue-600">
-            Count:<b className=" text-white font-bold"> {count}</b>
+            Count:<b className=" text-white font-bold"> {globalData}</b>
           </p>
           <div className="mb-10">
             <button
