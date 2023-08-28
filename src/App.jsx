@@ -1,6 +1,6 @@
+import { useState } from "react";
 import A from "./Components/A";
 import B from "./Components/B";
-import Z100 from "./Components/Z100";
 function App() {
   return (
     <>
@@ -8,7 +8,6 @@ function App() {
 
       <A />
       <B />
-      <Z100 />
     </>
   );
 }

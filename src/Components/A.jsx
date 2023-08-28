@@ -1,15 +1,20 @@
-import React from "react";
-import useCounter from "./useCounter";
+import useFetch from "./useFetch";
 
 const A = () => {
-  const { count, increment, decrement } = useCounter(10);
-  return (
+  const { data, loading } = useFetch(
+    "https://jsonplaceholder.typicode.com/users"
+  );
+  // console.log(data);
+  return loading ? (
+    <h1>Loading .....</h1>
+  ) : (
     <div className="a">
-      <p>this is A componet</p>
-      <h3>useCounter</h3>
-      <h3>count: {count}</h3>
-      <button onClick={increment}>IncrementByOne</button>
-      <button onClick={decrement}>IncrementByOne</button>
+      <h3>data fetching below</h3>
+      {data?.map((d) => (
+        <ul key={d.userid}>
+          <li>{d.username}</li>
+        </ul>
+      ))}
     </div>
   );
 };
