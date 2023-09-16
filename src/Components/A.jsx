@@ -1,3 +1,4 @@
+import Loader from "./Loader";
 import useFetch from "./useFetch";
 
 const A = () => {
@@ -6,11 +7,12 @@ const A = () => {
   );
   // console.log(data);
   return loading ? (
-    <h1>Loading .....</h1>
+    <div>
+      <Loader />
+    </div>
   ) : (
     <div className="a">
-      <h3>data fetching below</h3>
-      {data?.map((d) => (
+      {data.slice(0, 3)?.map((d) => (
         <ul key={d.userid}>
           <li>{d.username}</li>
         </ul>
